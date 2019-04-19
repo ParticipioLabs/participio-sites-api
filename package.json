@@ -1,0 +1,40 @@
+{
+  "name": "cache-middleware-for-edgeryders-discourse-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run prod",
+    "dev": "NODE_ENV=development npm run watch ./src/bin/www",
+    "prod": "npm run build && NODE_ENV=production node ./dist/bin/www",
+    "build": "npm run clean && babel ./src --out-dir dist",
+    "clean": "rimraf dist",
+    "watch": "nodemon --config ./nodemon.json --"
+  },
+  "dependencies": {
+    "@sentry/node": "^5.0.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "curl-request": "^1.1.1",
+    "debug": "~2.6.9",
+    "dotenv": "^7.0.0",
+    "express": "~4.16.0",
+    "flatted": "^2.0.0",
+    "fs": "0.0.1-security",
+    "memory-cache": "^0.2.0",
+    "moment": "^2.24.0",
+    "morgan": "~1.9.0",
+    "node-cron": "^2.0.3",
+    "rimraf": "^2.6.3",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.13.0",
+    "nodemon": "^1.18.9"
+  }
+}

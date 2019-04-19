@@ -1,0 +1,21 @@
+.DS_Store
+/node_modules
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Don't commit environment file
+.env
+
+# Don't commit build files
+dist
+build
+logs
+
+# Don't commit cache files
+.redis-cache
