@@ -12,7 +12,15 @@ router.get('/get-data', checkCache(), (req, res) => {
     });
   }
 
+  if(req.query.endpoint.substring(0, 22) != 'https://edgeryders.eu/') {
+    return res.status(400).send({
+      message: 'Not an allowed endpoint'
+    });
+  }
+
   axios.defaults.headers.common['Accept'] = 'application/json';
+
+  console.log(req.query.endpoint)
 
   axios.get(req.query.endpoint, {params: {api_key: process.env.DISCOURSE_API_KEY}})
     .then(response => {
