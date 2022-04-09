@@ -23,7 +23,7 @@
     "flatted": "^2.0.0",
     "fs": "0.0.1-security",
     "memory-cache": "^0.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "morgan": "~1.9.0",
     "node-cron": "^2.0.3",
     "rimraf": "^2.6.3",
